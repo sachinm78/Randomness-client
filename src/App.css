@@ -13,6 +13,29 @@
   color: white;
 }
 
+.sh-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 36px;
+}
+
+.sh-container h1 {
+  padding: 10px;
+  position: relative;
+  z-index: 2;
+} 
+.sh-container img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+}
+
 .App-link {
   color: #61dafb;
 }
