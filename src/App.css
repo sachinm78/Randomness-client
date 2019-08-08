@@ -29,7 +29,19 @@
 } 
 
 .sh-container h2 {
+  padding: 10px;
+  position: relative;
+  z-index: 2;
+} 
+
+.sh-container h3 {
   display:inline-block;
+  margin-right:5px;
+  color: red;
+  z-index: 2;
+} 
+
+.sh-container p {
   margin-right:5px;
   color: black;
   z-index: 2;
@@ -45,6 +57,7 @@
 }
 
 .sh-container button {
+  display:inline-block;
   z-index: 2;
 }
 
