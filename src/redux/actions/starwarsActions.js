@@ -1,8 +1,8 @@
 
-export const fetchStarwarsData = () => dispatch => {
+export const fetchStarWarsData = () => dispatch => {
     return fetch('http://localhost:3001/starwars')
     .then(res => res.json())
-    .then(superheros => dispatch({
+    .then(starwars_data => dispatch({
         type: 'FETCH_STARWARSDATA_SUCCESS',
         payload: starwars_data
     }))

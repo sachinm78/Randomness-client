@@ -1,24 +1,25 @@
 import React, { Component } from 'react'
-// import { connect } from 'react-redux'
-// import { fetchStarWarsData, fetchRandomPrefix, fetchRandomName, fetchRandomSuffix, fetchRandomPower } from '../redux/actions/starwarsActions'
-// import { getRandom } from '../components/randomizer'
+import { connect } from 'react-redux'
+import { fetchStarWarsData, fetchRandomCharacter } from '../redux/actions/starwarsActions'
+import { getRandom } from '../components/randomizer'
 
-export default class StarWarsContainer extends Component {
+class StarWarsContainer extends Component {
 
-    // state = {
-    //     starwars_data: []
-    // }
+    state = {
+        starwars_data: []
+    }
 
-    // componentDidMount() {
-    //     this.props.fetchStarWarsData()
+    componentDidMount() {
+        this.props.fetchStarWarsData()
+        debugger
         
-    // }
+    }
 
-    // fetchPrefixOnClick=(e) => {
-    //     e.preventDefault()
-    //     let item = getRandom(this.props.state.superheros)
-    //     this.props.fetchRandomPrefix(item.prefix)
-    // }
+    fetchCharacterOnClick=(e) => {
+        e.preventDefault()
+        let item = getRandom(this.props.state.starwars_data)
+        this.props.fetchRandomCharacter(item.character)
+    }
 
     // fetchNameOnClick=(e) => {
     //     e.preventDefault()
@@ -45,12 +46,12 @@ export default class StarWarsContainer extends Component {
             <div className = 'sw-container'>
                 <img src="https://www.pixel-creation.com/wp-content/uploads/sw-tfa-desktop-wallpaper-2560x1440-starwars.jpg" alt="starwars background"></img>
                 <h1>A Long Time Ago In A Galaxy Far Far Away...Things Got Random!</h1>
-                {/* <h2> {this.props.state.prefix} {this.props.state.name} {this.props.state.suffix}</h2>
-                <h3>has the power of</h3> 
-                <h2>{this.props.state.power}</h2>
+                <h2> {this.props.state.character} </h2>
                 
-                <button onClick={e => this.fetchPrefixOnClick(e)}>Change Prefix</button>
-                <button onClick={e => this.fetchNameOnClick(e)}>Change    Name</button>
+                {/* <h2>and {this.props.state.droid} explored {this.props.state.planet} in a {this.props.state.vehicle}</h2> */}
+                
+                <button onClick={e => this.fetchCharacterOnClick(e)}>Change Character</button>
+                {/* <button onClick={e => this.fetchNameOnClick(e)}>Change    Name</button>
                 <button onClick={e => this.fetchSuffixOnClick(e)}>Change Suffix</button>
                 <button onClick={e => this.fetchPowerOnClick(e)}>Change Power</button> */}
                                 
@@ -60,10 +61,10 @@ export default class StarWarsContainer extends Component {
     }
 }
 
-// const mapStateToProps = state => {
-//     return {
-//         state: state.superheros
-//     }
-// }
+const mapStateToProps = state => {
+    return {
+        state: state.starwars_data
+    }
+}
 
-// export default connect(mapStateToProps, { fetchSuperheros, fetchRandomPrefix, fetchRandomName, fetchRandomSuffix, fetchRandomPower })(SuperHerosContainer)
+export default connect(mapStateToProps, { fetchStarWarsData, fetchRandomCharacter })(StarWarsContainer)
