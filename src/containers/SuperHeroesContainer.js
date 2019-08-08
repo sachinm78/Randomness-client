@@ -4,32 +4,40 @@ import React, { Component } from 'react'
 export default class SuperHeroesContainer extends Component {
 
     state = {
-        superheroes: []
+        superheros: []
     }
 
-    // componentDidMount() {
-    //     fetch('http://localhost:3001')
-    //         .then(res => res.json())
-    //         .then(categories => this.setState({ categories }))
-    // }
+    componentDidMount() {
+        fetch('http://localhost:3001/superheros')
+            .then(res => res.json())
+            .then(superheros => this.setState({ superheros }))
+    }
 
     render() {
-        // if (categories.length === 0) {
         return (
             <div className = 'sh-container'>
                 <h1>Welcome to Your Random Super Hero Adventure!</h1>
                 <img src="https://i2.wp.com/beccabug.com/wp-content/uploads/2012/02/superherologos.jpg?resize=1140%2C682&ssl=1" alt="superhero background"></img> 
+                
+                {/* <ul>
+                    {this.state.superheros.map(superhero => (
+                        <div>
+                            <p>Name: {superhero.name}</p>
+                        </div>
+                    ))}
+                </ul> */}
             </div>
+        
         )
-        // }
-          
     }
+    
+
 }
 
 // const mapStateToProps = state => {
 //     return {
-//         categories: state.categories
+//         superheros: state.superheros
 //     }
 // }
 
-// export default connect(mapStateToProps)(CategoriesContainer)
+// export default connect(mapStateToProps)(SuperHerosContainer)
