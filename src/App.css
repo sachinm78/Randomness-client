@@ -58,6 +58,8 @@
 
 .sh-container button {
   display:inline-block;
+  background-color: aqua;
+  padding: .5em;
   z-index: 2;
 }
 

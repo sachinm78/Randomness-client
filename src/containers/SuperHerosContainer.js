@@ -49,7 +49,7 @@ class SuperHerosContainer extends Component {
                 <h2>{this.props.state.power}</h2>
                 
                 <button onClick={e => this.fetchPrefixOnClick(e)}>Change Prefix</button>
-                <button onClick={e => this.fetchNameOnClick(e)}>Change Name</button>
+                <button onClick={e => this.fetchNameOnClick(e)}>Change    Name</button>
                 <button onClick={e => this.fetchSuffixOnClick(e)}>Change Suffix</button>
                 <button onClick={e => this.fetchPowerOnClick(e)}>Change Power</button>
                                 
