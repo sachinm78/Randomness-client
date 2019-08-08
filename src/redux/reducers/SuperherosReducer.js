@@ -26,6 +26,20 @@ export default (state = initialstate, action) => {
                 ...state, 
                 name: action.payload,                
             }
+
+        case 'RANDOM_SUFFIX_SUCCESS':
+    
+            return {
+                ...state, 
+                suffix: action.payload,                
+            }
+
+        case 'RANDOM_POWER_SUCCESS':
+
+            return {
+                ...state, 
+                power: action.payload,                
+            }
             
         default:
             return state

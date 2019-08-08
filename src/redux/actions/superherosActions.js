@@ -21,3 +21,17 @@ export const fetchRandomName = (name) => {
         payload: name
     }
 }
+
+export const fetchRandomSuffix = (suffix) => {
+    return {
+        type: 'RANDOM_SUFFIX_SUCCESS',
+        payload: suffix
+    }
+}
+
+export const fetchRandomPower = (power) => {
+    return {
+        type: 'RANDOM_POWER_SUCCESS',
+        payload: power
+    }
+}
