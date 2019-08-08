@@ -28,11 +28,12 @@
   z-index: 2;
 } 
 
-/* .sh-container h3 {
-  margin: 5px 12px;
-  float: left;
+.sh-container h2 {
+  display:inline-block;
+  margin-right:5px;
   color: black;
-}  */
+  z-index: 2;
+} 
 
 .sh-container img {
   position: absolute;
@@ -41,6 +42,10 @@
   width: 100%;
   height: auto;
   opacity: 0.3;
+}
+
+.sh-container button {
+  z-index: 2;
 }
 
 .sw-container {

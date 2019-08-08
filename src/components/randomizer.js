@@ -1,11 +1,7 @@
-import React, { Component } from 'react';
 
-export default class Randomness extends Component {
-
-getRandom(items) {
+export const getRandom= items => {
     let randomness = items[Math.floor(Math.random()*items.length)];
-
-    return 
-    }
-
+    
+    return randomness 
+    
 }

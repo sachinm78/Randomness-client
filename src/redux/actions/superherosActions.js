@@ -7,3 +7,10 @@ export const fetchSuperheros = () => dispatch => {
         payload: superheros
     }))
 }
+
+export const fetchRandomPrefix = (test) => {
+    return {
+        type: 'RANDOM_PREFIX_SUCCESS',
+        payload: test
+    }
+}
