@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchSuperheros } from '../redux/actions/superherosActions'
+// import { randomness } from '../components/randomizer'
 
 class SuperHerosContainer extends Component {
 
@@ -18,18 +19,9 @@ class SuperHerosContainer extends Component {
                 <img src="https://i2.wp.com/beccabug.com/wp-content/uploads/2012/02/superherologos.jpg?resize=1140%2C682&ssl=1" alt="superhero background"></img>
 
                 <h1>What's Your Random Superhero Name?</h1>
+                
                 <h2>Prefix: </h2><h2>Name: </h2><h2>Suffix: </h2><h2>Power: </h2>
                 
-                {/* function getRandom(items) {
-                return items[Math.floor(Math.random()*items.length)];
-                } */}
-
-                {/* Array.prototype.randomElement = function () {
-                    return this[Math.floor(Math.random() * this.length)]
-                }
-                Now I can get a random array element by just typing:
-
-                var myRandomElement = myArray.randomElement() */}
             </div>
         
         )
