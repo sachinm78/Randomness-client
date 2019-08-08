@@ -8,9 +8,16 @@ export const fetchSuperheros = () => dispatch => {
     }))
 }
 
-export const fetchRandomPrefix = (test) => {
+export const fetchRandomPrefix = (prefix) => {
     return {
         type: 'RANDOM_PREFIX_SUCCESS',
-        payload: test
+        payload: prefix
+    }
+}
+
+export const fetchRandomName = (name) => {
+    return {
+        type: 'RANDOM_NAME_SUCCESS',
+        payload: name
     }
 }

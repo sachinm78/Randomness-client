@@ -20,6 +20,12 @@ export default (state = initialstate, action) => {
                 ...state, 
                 prefix: action.payload,                
             }
+        case 'RANDOM_NAME_SUCCESS':
+        
+            return {
+                ...state, 
+                name: action.payload,                
+            }
             
         default:
             return state

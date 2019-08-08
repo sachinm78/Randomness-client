@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchSuperheros, fetchRandomPrefix } from '../redux/actions/superherosActions'
+import { fetchSuperheros, fetchRandomPrefix, fetchRandomName } from '../redux/actions/superherosActions'
 import { getRandom } from '../components/randomizer'
 
 class SuperHerosContainer extends Component {
@@ -20,6 +20,12 @@ class SuperHerosContainer extends Component {
         this.props.fetchRandomPrefix(item.prefix)
     }
 
+    fetchNameOnClick=(e) => {
+        e.preventDefault()
+        let item = getRandom(this.props.state.superheros)
+        this.props.fetchRandomName(item.name)
+    }
+
     render() {
         return (
             <div className = 'sh-container'>
@@ -30,7 +36,10 @@ class SuperHerosContainer extends Component {
                 
                 <h2 >Prefix: {this.props.state.prefix}</h2>
                 <button onClick={e => this.fetchPrefixOnClick(e)}>Change Prefix</button>
-                <h2>Name: </h2><h2>Suffix: </h2><h2>Power: </h2>
+                <h2>Name: </h2>
+                <button onClick={e => this.fetchNameOnClick(e)}>Change Name</button>
+                <h2>Suffix: </h2>
+                <h2>Power: </h2>
 
                                 
             </div>
@@ -45,4 +54,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { fetchSuperheros, fetchRandomPrefix })(SuperHerosContainer)
+export default connect(mapStateToProps, { fetchSuperheros, fetchRandomPrefix, fetchRandomName })(SuperHerosContainer)
