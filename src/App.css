@@ -27,6 +27,13 @@
   position: relative;
   z-index: 2;
 } 
+
+/* .sh-container h3 {
+  margin: 5px 12px;
+  float: left;
+  color: black;
+}  */
+
 .sh-container img {
   position: absolute;
   left: 0;

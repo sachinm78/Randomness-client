@@ -15,8 +15,10 @@ class SuperHerosContainer extends Component {
     render() {
         return (
             <div className = 'sh-container'>
+                <img src="https://i2.wp.com/beccabug.com/wp-content/uploads/2012/02/superherologos.jpg?resize=1140%2C682&ssl=1" alt="superhero background"></img>
+
                 <h1>What's Your Random Superhero Name?</h1>
-                <img src="https://i2.wp.com/beccabug.com/wp-content/uploads/2012/02/superherologos.jpg?resize=1140%2C682&ssl=1" alt="superhero background"></img> 
+                <h2>Prefix: </h2><h2>Name: </h2><h2>Suffix: </h2><h2>Power: </h2>
                 
                 {/* function getRandom(items) {
                 return items[Math.floor(Math.random()*items.length)];
