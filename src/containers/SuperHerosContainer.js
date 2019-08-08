@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-// import { connect } from 'react-redux'
+import { connect } from 'react-redux'
 
-export default class SuperHeroesContainer extends Component {
+class SuperHerosContainer extends Component {
 
     state = {
         superheros: []
@@ -34,10 +34,10 @@ export default class SuperHeroesContainer extends Component {
 
 }
 
-// const mapStateToProps = state => {
-//     return {
-//         superheros: state.superheros
-//     }
-// }
+const mapStateToProps = state => {
+    return {
+        superheros: state.superheros
+    }
+}
 
-// export default connect(mapStateToProps)(SuperHerosContainer)
+export default connect(mapStateToProps)(SuperHerosContainer)
