@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 
 const NavBar = () => {
     return (
-        <div className = "navigationWrapper">
-            <div className = "linksWrapper">
-                <Link to = '/' className = 'navLink' activeClassName = 'activeLink'>Home</Link>
-                <Link to = '/superheroes' className = 'navLink' activeClassName = 'activeLink'>Super Heroes</Link>
-                <Link to = '/starwars' className = 'navLink' activeClassName = 'activeLink'>Star Wars</Link>
+        <div className = 'Nav-wrapper'>
+            <div className = 'Nav-links-wrapper'>
+                <Link to = '/' className = 'Nav-link' activeClassName = 'Active-link'>Home</Link>
+                <Link to = '/superheroes' className = 'Nav-link' activeClassName = 'Active-link'>Super Heroes</Link>
+                <Link to = '/starwars' className = 'Nav-link' activeClassName = 'Active-link'>Star Wars</Link>
             </div>
         </div>
     )

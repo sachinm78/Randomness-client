@@ -2,9 +2,6 @@
 .App {
   text-align: center;
 }
-.App-link {
-  color: #61dafb;
-}
 
 /* Home */
 .Home-wrapper {
@@ -31,29 +28,30 @@
 }
 
 /* Nav */
-.navigationWrapper {	
+.Nav-wrapper {	
   background: teal;
   text-align: center;
   font-size: 27px;
+  text-shadow: 2px 2px black;
 	width: 100%;
 	min-height: 55px;
 	padding-left: 25px;
 	border-bottom: 1px solid rgba(15,15,15,0.5);
 	margin: auto;
 }
-.linksWrapper {
+.Nav-links-wrapper {
   margin: auto;
 }
-.navLink {
+.Nav-link {
   margin: 5px 12px;
   float: left;
   color: white;
 }
-.navLink:hover {
-  color: black !important;
+.Nav-link:hover {
+  color: red !important;
 }
-.activeLink {
-  color: black !important;
+.Active-link {
+  color: red !important;
 }
 
 /* Super Heros */
