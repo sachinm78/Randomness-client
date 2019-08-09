@@ -44,20 +44,18 @@ class StarWarsContainer extends Component {
         
         return (
             <div className = 'sw-container'>
-                <img src="https://www.pixel-creation.com/wp-content/uploads/sw-tfa-desktop-wallpaper-2560x1440-starwars.jpg" alt="starwars background"></img>
-                <h1>A Long Time Ago In A Galaxy Far Far Away...</h1>
-                <h2>{this.props.state.character} and {this.props.state.droid}</h2>
-                <h3>explored</h3>
-                <h2>{this.props.state.planet}</h2>
-                <h3>in a </h3>
-                <h2>{this.props.state.vehicle}</h2>
-                
-                
-                <button onClick={e => this.fetchCharacterOnClick(e)}>Change Character</button>
-                <button onClick={e => this.fetchDroidOnClick(e)}>Change Droid</button>
-                <button onClick={e => this.fetchPlanetOnClick(e)}>Change Planet</button>
-                <button onClick={e => this.fetchVehicleOnClick(e)}>Change Vehicle</button>
-                                
+                <div class = 'sw-header'>
+                    <img src="https://www.pixel-creation.com/wp-content/uploads/sw-tfa-desktop-wallpaper-2560x1440-starwars.jpg" alt="starwars background"></img>
+                    <h1>A Long Time Ago In A Galaxy Far Far Away...</h1>
+                </div>
+                <div class = 'sw-body'>
+                    <h2>{this.props.state.character} and {this.props.state.droid}</h2>
+                    <button onClick={e => this.fetchCharacterOnClick(e)}>Change Character</button>
+                    <button onClick={e => this.fetchDroidOnClick(e)}>Change Droid</button>
+                    <h2>explored {this.props.state.planet} in {this.props.state.vehicle}</h2>
+                    <button onClick={e => this.fetchPlanetOnClick(e)}>Change Planet</button>
+                    <button onClick={e => this.fetchVehicleOnClick(e)}>Change Vehicle</button>
+                </div>               
             </div>
         
         )
