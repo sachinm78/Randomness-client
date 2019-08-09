@@ -55,6 +55,19 @@
   color: red !important;
 }
 
+/* Footer */
+.Home-footer {
+  align-items: center;
+  /* text-shadow: 2px 2px black; */
+  color: white;
+}
+.Home-footer a {
+  color: gold;
+}
+.Home-footer a:hover {
+  color: red !important;
+}
+
 /* Super Heros */
 .sh-container {
   display: flex;
