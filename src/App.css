@@ -7,16 +7,27 @@
 }
 
 /* Home */
-.Home-header {
+.Home-wrapper {
   background-image: url('https://thumbs.gfycat.com/DelayedMiserableHen-size_restricted.gif');
   background-repeat: repeat;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-decoration: underline;
-  font-size: 45px;
+  text-shadow: 2px 2px black;
   color: white;
+  }
+.Home-header {
+  font-size: 45px;
+}
+.Home-body {
+  font-size: 36px;
+}
+.Home-link {
+  color: gold;
+}
+.Home-link:hover {
+  color: red !important;
 }
 
 /* Nav */
