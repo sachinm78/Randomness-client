@@ -60,12 +60,12 @@
 .sh-container h2 {
   padding: 10px;
   position: relative;
+  color: rgb(0, 0, 234);
   z-index: 2;
 } 
 .sh-container h3 {
   display:inline-block;
   margin-right:5px;
-  color: red;
   z-index: 2;
 } 
 .sh-container img {
@@ -109,12 +109,12 @@
 .sw-container h2 {
   padding: 10px;
   position: relative;
+  color: orangered;
   z-index: 2;
 }
 .sw-container h3 {
   display:inline-block;
   margin-right:5px;
-  color: rgb(0, 0, 234);
   z-index: 2;
 } 
 .sw-container button {

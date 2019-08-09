@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchStarWarsData, fetchRandomCharacter, fetchRandomDroid, fetchRandomPlanet } from '../redux/actions/starwarsActions'
+import { fetchStarWarsData, fetchRandomCharacter, fetchRandomDroid, fetchRandomPlanet, fetchRandomVehicle } from '../redux/actions/starwarsActions'
 import { getRandom } from '../components/randomizer'
 
 class StarWarsContainer extends Component {
@@ -33,11 +33,11 @@ class StarWarsContainer extends Component {
         this.props.fetchRandomPlanet(item.planet)
     }
 
-    // fetchPowerOnClick=(e) => {
-    //     e.preventDefault()
-    //     let item = getRandom(this.props.state.starwars_data)
-    //     this.props.fetchRandomPower(item.power)
-    // }
+    fetchVehicleOnClick=(e) => {
+        e.preventDefault()
+        let item = getRandom(this.props.state.starwars_data)
+        this.props.fetchRandomVehicle(item.vehicle)
+    }
 
 
     render() {
@@ -50,13 +50,13 @@ class StarWarsContainer extends Component {
                 <h3>explored</h3>
                 <h2>{this.props.state.planet}</h2>
                 <h3>in a </h3>
+                <h2>{this.props.state.vehicle}</h2>
                 
-                {/* {this.props.state.vehicle} */}
                 
                 <button onClick={e => this.fetchCharacterOnClick(e)}>Change Character</button>
                 <button onClick={e => this.fetchDroidOnClick(e)}>Change Droid</button>
                 <button onClick={e => this.fetchPlanetOnClick(e)}>Change Planet</button>
-                {/* <button onClick={e => this.fetchPowerOnClick(e)}>Change Power</button> */}
+                <button onClick={e => this.fetchVehicleOnClick(e)}>Change Vehicle</button>
                                 
             </div>
         
@@ -70,4 +70,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { fetchStarWarsData, fetchRandomCharacter, fetchRandomDroid, fetchRandomPlanet })(StarWarsContainer)
+export default connect(mapStateToProps, { fetchStarWarsData, fetchRandomCharacter, fetchRandomDroid, fetchRandomPlanet, fetchRandomVehicle })(StarWarsContainer)
