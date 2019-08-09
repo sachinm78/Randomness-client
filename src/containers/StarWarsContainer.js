@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchStarWarsData, fetchRandomCharacter } from '../redux/actions/starwarsActions'
+import { fetchStarWarsData, fetchRandomCharacter, fetchRandomDroid, fetchRandomPlanet } from '../redux/actions/starwarsActions'
 import { getRandom } from '../components/randomizer'
 
 class StarWarsContainer extends Component {
@@ -21,21 +21,21 @@ class StarWarsContainer extends Component {
         this.props.fetchRandomCharacter(item.character)
     }
 
-    // fetchNameOnClick=(e) => {
-    //     e.preventDefault()
-    //     let item = getRandom(this.props.state.superheros)
-    //     this.props.fetchRandomName(item.name)
-    // }
+    fetchDroidOnClick=(e) => {
+        e.preventDefault()
+        let item = getRandom(this.props.state.starwars_data)
+        this.props.fetchRandomDroid(item.droid)
+    }
 
-    // fetchSuffixOnClick=(e) => {
-    //     e.preventDefault()
-    //     let item = getRandom(this.props.state.superheros)
-    //     this.props.fetchRandomSuffix(item.suffix)
-    // }
+    fetchPlanetOnClick=(e) => {
+        e.preventDefault()
+        let item = getRandom(this.props.state.starwars_data)
+        this.props.fetchRandomPlanet(item.planet)
+    }
 
     // fetchPowerOnClick=(e) => {
     //     e.preventDefault()
-    //     let item = getRandom(this.props.state.superheros)
+    //     let item = getRandom(this.props.state.starwars_data)
     //     this.props.fetchRandomPower(item.power)
     // }
 
@@ -45,15 +45,18 @@ class StarWarsContainer extends Component {
         return (
             <div className = 'sw-container'>
                 <img src="https://www.pixel-creation.com/wp-content/uploads/sw-tfa-desktop-wallpaper-2560x1440-starwars.jpg" alt="starwars background"></img>
-                <h1>A Long Time Ago In A Galaxy Far Far Away...Things Got Random!</h1>
-                <h2> {this.props.state.character} </h2>
+                <h1>A Long Time Ago In A Galaxy Far Far Away...</h1>
+                <h2>{this.props.state.character} and {this.props.state.droid}</h2>
+                <h3>explored</h3>
+                <h2>{this.props.state.planet}</h2>
+                <h3>in a </h3>
                 
-                {/* <h2>and {this.props.state.droid} explored {this.props.state.planet} in a {this.props.state.vehicle}</h2> */}
+                {/* {this.props.state.vehicle} */}
                 
                 <button onClick={e => this.fetchCharacterOnClick(e)}>Change Character</button>
-                {/* <button onClick={e => this.fetchNameOnClick(e)}>Change    Name</button>
-                <button onClick={e => this.fetchSuffixOnClick(e)}>Change Suffix</button>
-                <button onClick={e => this.fetchPowerOnClick(e)}>Change Power</button> */}
+                <button onClick={e => this.fetchDroidOnClick(e)}>Change Droid</button>
+                <button onClick={e => this.fetchPlanetOnClick(e)}>Change Planet</button>
+                {/* <button onClick={e => this.fetchPowerOnClick(e)}>Change Power</button> */}
                                 
             </div>
         
@@ -67,4 +70,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { fetchStarWarsData, fetchRandomCharacter })(StarWarsContainer)
+export default connect(mapStateToProps, { fetchStarWarsData, fetchRandomCharacter, fetchRandomDroid, fetchRandomPlanet })(StarWarsContainer)

@@ -68,11 +68,6 @@
   color: red;
   z-index: 2;
 } 
-.sh-container p {
-  margin-right:5px;
-  color: black;
-  z-index: 2;
-} 
 .sh-container img {
   position: absolute;
   left: 0;
@@ -116,6 +111,12 @@
   position: relative;
   z-index: 2;
 }
+.sw-container h3 {
+  display:inline-block;
+  margin-right:5px;
+  color: rgb(0, 0, 234);
+  z-index: 2;
+} 
 .sw-container button {
   display:inline-block;
   background-color: rgb(255, 255, 0);
