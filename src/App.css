@@ -7,6 +7,7 @@
 .Home-wrapper {
   background-image: url('https://thumbs.gfycat.com/DelayedMiserableHen-size_restricted.gif');
   background-repeat: repeat;
+  width: 102%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -72,13 +73,13 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 102%;
   height: auto;
   opacity: 0.3;
 } 
 .sh-header {
   font-size: 27px;
-  color:red;
+  color:green;
   text-shadow: 2px 2px gold;
 }
 .sh-body {
@@ -96,7 +97,7 @@
   font-size: 36px;
   padding: 10px;
   display:inline-block;
-  color: red;
+  color: green;
   text-shadow: 2px 2px gold;
   margin-right:5px;
   z-index: 2;
@@ -106,6 +107,7 @@
   background-color: gold;
   color: black;
   font-weight: bold;
+  font-size: 18px;
   padding: .78em;
   z-index: 2;
 }
@@ -134,21 +136,21 @@
 } 
 .sw-header {
   font-size: 33px;
-  color:yellow;
+  color:purple;
   text-shadow: 2px 2px black;
 }
 .sw-container img {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 102%;
   height: auto;
   opacity: 0.4;
 }
 .sw-body {
   z-index: 2;
-  color: blue;
-  text-shadow: 2px 2px skyblue;
+  color: black;
+  text-shadow: 2px 2px gold;
 }
 .sw-body h2 {
   font-size: 50px;
@@ -161,25 +163,7 @@
   background-color: gold;
   color: black;
   font-weight: bold;
+  font-size: 18px;
   padding: .78em;
   z-index: 2;
 }
-
-
-/* .sw-container h2 {
-  padding: 10px;
-  position: relative;
-  color: orangered;
-  z-index: 2;
-}
-.sw-container h3 {
-  display:inline-block;
-  margin-right:5px;
-  z-index: 2;
-} 
-.sw-container button {
-  display:inline-block;
-  background-color: rgb(255, 255, 0);
-  padding: .5em;
-  z-index: 2; */
-/* } */
