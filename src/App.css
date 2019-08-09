@@ -1,7 +1,12 @@
+/* App */
 .App {
   text-align: center;
 }
+.App-link {
+  color: #61dafb;
+}
 
+/* Home */
 .Home-header {
   background-image: url('https://thumbs.gfycat.com/DelayedMiserableHen-size_restricted.gif');
   min-height: 100vh;
@@ -13,6 +18,32 @@
   color: white;
 }
 
+/* Nav */
+.navigationWrapper {	
+  background: teal;
+  font-size: 27px;
+	width: 100%;
+	min-height: 55px;
+	padding-left: 25px;
+	border-bottom: 1px solid rgba(15,15,15,0.5);
+	margin: auto;
+}
+.linksWrapper {
+  margin: auto;
+}
+.navLink {
+  margin: 5px 12px;
+  float: left;
+  color: white;
+}
+.navLink:hover {
+  color: black !important;
+}
+.activeLink {
+  color: black !important;
+}
+
+/* Super Heros */
 .sh-container {
   display: flex;
   flex-direction: column;
@@ -21,32 +52,27 @@
   position: relative;
   font-size: 27px;
 }
-
 .sh-container h1 {
   padding: 10px;
   position: relative;
   z-index: 2;
 } 
-
 .sh-container h2 {
   padding: 10px;
   position: relative;
   z-index: 2;
 } 
-
 .sh-container h3 {
   display:inline-block;
   margin-right:5px;
   color: red;
   z-index: 2;
 } 
-
 .sh-container p {
   margin-right:5px;
   color: black;
   z-index: 2;
 } 
-
 .sh-container img {
   position: absolute;
   left: 0;
@@ -55,7 +81,6 @@
   height: auto;
   opacity: 0.3;
 }
-
 .sh-container button {
   display:inline-block;
   background-color: aqua;
@@ -63,6 +88,7 @@
   z-index: 2;
 }
 
+/* Star Wars */
 .sw-container {
   display: flex;
   flex-direction: column;
@@ -85,32 +111,14 @@
   height: auto;
   opacity: 0.3;
 }
-
-.App-link {
-  color: #61dafb;
+.sw-container h2 {
+  padding: 10px;
+  position: relative;
+  z-index: 2;
 }
-
-.navigationWrapper {	
-  background: teal;
-  font-size: 27px;
-	width: 100%;
-	min-height: 55px;
-	padding-left: 25px;
-	border-bottom: 1px solid rgba(15,15,15,0.5);
-	margin: auto;
-}
-.linksWrapper {
-  margin: auto;
-}
-
-.navLink {
-  margin: 5px 12px;
-  float: left;
-  color: white;
-}
-.navLink:hover {
-  color: black !important;
-}
-.activeLink {
-  color: black !important;
+.sw-container button {
+  display:inline-block;
+  background-color: rgb(255, 255, 0);
+  padding: .5em;
+  z-index: 2;
 }
