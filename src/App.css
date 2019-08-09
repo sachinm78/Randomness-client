@@ -62,24 +62,12 @@
   justify-content: center;
   background-repeat: repeat;
   position: relative;
-  font-size: 27px;
 }
 .sh-container h1 {
   padding: 10px;
   position: relative;
   z-index: 2;
-} 
-.sh-container h2 {
-  padding: 10px;
-  position: relative;
-  color: rgb(0, 0, 234);
-  z-index: 2;
-} 
-.sh-container h3 {
-  display:inline-block;
-  margin-right:5px;
-  z-index: 2;
-} 
+}
 .sh-container img {
   position: absolute;
   left: 0;
@@ -87,11 +75,38 @@
   width: 100%;
   height: auto;
   opacity: 0.3;
+} 
+.sh-header {
+  font-size: 27px;
+  color:red;
+  text-shadow: 2px 2px gold;
 }
-.sh-container button {
+.sh-body {
+  z-index: 2;
+}
+.sh-body h2 {
+  font-size: 45px;
+  padding: 10px;
+  position: relative;
+  color: black;
+  text-shadow: 2px 2px gold;
+  z-index: 2;
+} 
+.sh-body h3 {
+  font-size: 36px;
+  padding: 10px;
   display:inline-block;
-  background-color: aqua;
-  padding: .5em;
+  color: red;
+  text-shadow: 2px 2px gold;
+  margin-right:5px;
+  z-index: 2;
+} 
+.sh-body button {
+  display:inline-block;
+  background-color: gold;
+  color: black;
+  font-weight: bold;
+  padding: .78em;
   z-index: 2;
 }
 

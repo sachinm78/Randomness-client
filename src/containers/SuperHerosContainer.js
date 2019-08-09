@@ -41,18 +41,21 @@ class SuperHerosContainer extends Component {
     render() {
         return (
             <div className = 'sh-container'>
-                <img src="https://i2.wp.com/beccabug.com/wp-content/uploads/2012/02/superherologos.jpg?resize=1140%2C682&ssl=1" alt="superhero background"></img>
+                    <div class = 'sh-header'>
+                        <img src="https://i2.wp.com/beccabug.com/wp-content/uploads/2012/02/superherologos.jpg?resize=1140%2C682&ssl=1" alt="superhero background"></img>
 
-                <h1>Generate Your Random Superhero Name and Power!</h1>
-                <h2> {this.props.state.prefix} {this.props.state.name} {this.props.state.suffix}</h2>
-                <h3>has the power of</h3> 
-                <h2>{this.props.state.power}</h2>
-                
-                <button onClick={e => this.fetchPrefixOnClick(e)}>Change Prefix</button>
-                <button onClick={e => this.fetchNameOnClick(e)}>Change    Name</button>
-                <button onClick={e => this.fetchSuffixOnClick(e)}>Change Suffix</button>
-                <button onClick={e => this.fetchPowerOnClick(e)}>Change Power</button>
-                                
+                        <h1>Generate Your Random Superhero Name and Power!</h1>
+                    </div>
+                    <div class = 'sh-body'>
+                        <h2> {this.props.state.prefix} {this.props.state.name} {this.props.state.suffix}</h2>
+                        <h3>has the power of</h3> 
+                        <h2>{this.props.state.power}</h2>
+                        
+                        <button onClick={e => this.fetchPrefixOnClick(e)}>Change Prefix</button>
+                        <button onClick={e => this.fetchNameOnClick(e)}>Change    Name</button>
+                        <button onClick={e => this.fetchSuffixOnClick(e)}>Change Suffix</button>
+                        <button onClick={e => this.fetchPowerOnClick(e)}>Change Power</button>
+                    </div>
             </div>
         
         )
