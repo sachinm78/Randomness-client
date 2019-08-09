@@ -58,8 +58,8 @@
 /* Footer */
 .Home-footer {
   align-items: center;
-  /* text-shadow: 2px 2px black; */
   color: white;
+  text-shadow: none;
 }
 .Home-footer a {
   color: gold;
@@ -88,7 +88,7 @@
   top: 0;
   width: 102%;
   height: auto;
-  opacity: 0.3;
+  opacity: 0.4;
 } 
 .sh-header {
   font-size: 27px;
@@ -139,14 +139,6 @@
   position: relative;
   z-index: 2;
 }
-.sw-container img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: auto;
-  opacity: 0.3;
-} 
 .sw-header {
   font-size: 33px;
   color:purple;
