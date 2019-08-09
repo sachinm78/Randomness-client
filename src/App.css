@@ -9,18 +9,20 @@
 /* Home */
 .Home-header {
   background-image: url('https://thumbs.gfycat.com/DelayedMiserableHen-size_restricted.gif');
+  background-repeat: repeat;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: 54px;
+  text-decoration: underline;
+  font-size: 45px;
   color: white;
 }
 
 /* Nav */
 .navigationWrapper {	
   background: teal;
+  text-align: center;
   font-size: 27px;
 	width: 100%;
 	min-height: 55px;
@@ -49,6 +51,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-repeat: repeat;
   position: relative;
   font-size: 27px;
 }
@@ -89,6 +92,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-repeat: repeat;
   position: relative;
   font-size: 27px;
 }
