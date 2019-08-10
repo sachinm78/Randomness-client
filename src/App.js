@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import SuperHeroesContainer from './containers/SuperHerosContainer'
 import StarWarsContainer from './containers/StarWarsContainer'
 import HipsterIpsumContainer from './containers/HipsterIpsumContainer'
+import SmartDevContainer from './containers/SmartDevContainer'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/superheroes' component={SuperHeroesContainer} />
           <Route path='/starwars' component={StarWarsContainer} />
           <Route path='/hipster_ipsum' component={HipsterIpsumContainer} />
+          <Route path='/smart_dev' component={SmartDevContainer} />
         </div>        
       </div>
     </Router>
