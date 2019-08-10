@@ -11,7 +11,7 @@ export default () =>
             <h3>Genrate a <Link to = '/superheroes' className = 'Home-link' activeClassName = 'Active-link'>Random Super Hero</Link> Name!</h3>
             <h3>Take a <Link to = '/starwars' className = 'Home-link' activeClassName = 'Active-link'>Random Star Wars</Link> Adventure!</h3>
             <h3>Generate a <Link to = '/hipster_ipsum' className = 'Home-link' activeClassName = 'Active-link'>Random Hipster Ipsum</Link> Sentence!</h3>
-            <h3>More content coming soon...!</h3>
+            <h3>Sound like a seasoned pro with a <Link to = '/smart_dev' className = 'Home-link' activeClassName = 'Active-link'>Random Smart Dev</Link> Sentence!</h3>
         </div>
         <div className="Home-footer">
             <Footer />
