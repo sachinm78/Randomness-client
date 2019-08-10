@@ -91,7 +91,7 @@
   opacity: 0.4;
 } 
 .sh-header {
-  font-size: 27px;
+  font-size: 33px;
   color:green;
   text-shadow: 2px 2px gold;
 }
@@ -164,6 +164,54 @@
   z-index: 2;
 } 
 .sw-body button {
+  display:inline-block;
+  background-color: gold;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  padding: .78em;
+  z-index: 2;
+}
+
+/* Hipster Ipsum */
+.hip-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: repeat;
+  position: relative;
+}
+.hip-container h1 {
+  padding: 10px;
+  position: relative;
+  z-index: 2;
+}
+.hip-header {
+  font-size: 33px;
+  color: maroon;
+  text-shadow: 2px 2px black;
+}
+.hip-container img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 102%;
+  height: auto;
+  opacity: 0.4;
+}
+.hip-body {
+  z-index: 2;
+  color: darkslategray;
+  text-shadow: 2px 2px black;
+}
+.hip-body h2 {
+  font-size: 60px;
+  padding: 10px;
+  position: relative;
+  z-index: 2;
+} 
+.hip-body button {
   display:inline-block;
   background-color: gold;
   color: black;

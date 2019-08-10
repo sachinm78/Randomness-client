@@ -25,7 +25,7 @@ class HipsterIpsumContainer extends Component {
         return (
             <div className = 'hip-container'>
                 <div class = 'hip-header'>
-                    <img src="https://www.pixel-creation.com/wp-content/uploads/sw-tfa-desktop-wallpaper-2560x1440-starwars.jpg" alt="starwars background"></img>
+                    <img src="https://static.vecteezy.com/system/resources/previews/000/119/234/non_2x/vector-retro-hipster-style-background.jpg" alt="hipster background"></img>
                     <h1>A Hipster Walked Into a Brew Pub and Said...</h1>
                 </div>
                 <div class = 'hip-body'>
