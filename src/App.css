@@ -102,7 +102,7 @@
   font-size: 45px;
   padding: 10px;
   position: relative;
-  color: black;
+  color: red;
   text-shadow: 2px 2px gold;
   z-index: 2;
 } 
@@ -237,7 +237,7 @@
 }
 .dev-header {
   font-size: 33px;
-  color: maroon;
+  color: teal;
   text-shadow: 2px 2px black;
 }
 .dev-container img {
@@ -250,7 +250,7 @@
 }
 .dev-body {
   z-index: 2;
-  color: darkslategray;
+  color: brown;
   text-shadow: 2px 2px black;
 }
 .dev-body h2 {
