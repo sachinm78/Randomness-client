@@ -48,12 +48,12 @@ class SuperHerosContainer extends Component {
                     </div>
                     <div class = 'sh-body'>
                         <h2> {this.props.state.prefix} {this.props.state.name} {this.props.state.suffix}</h2>
-                        <button onClick={e => this.fetchPrefixOnClick(e)}>Change Prefix</button>
-                        <button onClick={e => this.fetchNameOnClick(e)}>Change Name</button>
-                        <button onClick={e => this.fetchSuffixOnClick(e)}>Change Suffix</button>
+                        <button onClick={e => this.fetchPrefixOnClick(e)}>Generate Prefix</button>
+                        <button onClick={e => this.fetchNameOnClick(e)}>Generate Name</button>
+                        <button onClick={e => this.fetchSuffixOnClick(e)}>Generate Suffix</button>
                         <br />
                         <h2>has the power of {this.props.state.power}</h2>
-                        <button onClick={e => this.fetchPowerOnClick(e)}>Change Power</button>
+                        <button onClick={e => this.fetchPowerOnClick(e)}>Generate Power</button>
                         
                     </div>
             </div>

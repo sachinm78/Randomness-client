@@ -50,11 +50,11 @@ class StarWarsContainer extends Component {
                 </div>
                 <div class = 'sw-body'>
                     <h2>{this.props.state.character} and {this.props.state.droid}</h2>
-                    <button onClick={e => this.fetchCharacterOnClick(e)}>Change Character</button>
-                    <button onClick={e => this.fetchDroidOnClick(e)}>Change Droid</button>
+                    <button onClick={e => this.fetchCharacterOnClick(e)}>Generate Character</button>
+                    <button onClick={e => this.fetchDroidOnClick(e)}>Generate Droid</button>
                     <h2>explored {this.props.state.planet} in {this.props.state.vehicle}</h2>
-                    <button onClick={e => this.fetchPlanetOnClick(e)}>Change Planet</button>
-                    <button onClick={e => this.fetchVehicleOnClick(e)}>Change Vehicle</button>
+                    <button onClick={e => this.fetchPlanetOnClick(e)}>Generate Planet</button>
+                    <button onClick={e => this.fetchVehicleOnClick(e)}>Generate Vehicle</button>
                 </div>               
             </div>
         
