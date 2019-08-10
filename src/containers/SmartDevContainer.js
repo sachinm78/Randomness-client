@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchDevData, fetchRandomDevSentence } from '../redux/actions/smartDevActions'
+import { fetchDevData, fetchRandomSentence } from '../redux/actions/smartDevActions'
 import { getRandom } from '../components/randomizer'
 
 class SmartDevContainer extends Component {
@@ -14,10 +14,10 @@ class SmartDevContainer extends Component {
         
     }
 
-    fetchDevSentenceOnClick=(e) => {
+    fetchSentenceOnClick=(e) => {
         e.preventDefault()
         let item = getRandom(this.props.state.dev_data)
-        this.props.fetchRandomDevSentence(item.sentence)
+        this.props.fetchRandomSentence(item.sentence)
     }
 
     render() {
@@ -30,7 +30,7 @@ class SmartDevContainer extends Component {
                 </div>
                 <div class = 'dev-body'>
                     <h2>{this.props.state.sentence}</h2>
-                    <button onClick={e => this.fetchDevSentenceOnClick(e)}>Generate Sentence</button>                    
+                    <button onClick={e => this.fetchSentenceOnClick(e)}>Generate Sentence</button>                    
                 </div>               
             </div>
         
@@ -44,4 +44,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { fetchDevData, fetchRandomDevSentence })(SmartDevContainer)
+export default connect(mapStateToProps, { fetchDevData, fetchRandomSentence })(SmartDevContainer)
