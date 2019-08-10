@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchHipsterData, fetchRandomSentence } from '../redux/actions/hipsterActions'
+// import { fetchHipsterData, fetchRandomSentence } from '../redux/actions/hipsterActions'
 import { getRandom } from '../components/randomizer'
 
 class HipsterIpsumContainer extends Component {
@@ -44,4 +44,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { fetchHipsterData, fetchRandomSentence })(HipsterIpsumContainer)
+export default connect(mapStateToProps, { })(HipsterIpsumContainer)

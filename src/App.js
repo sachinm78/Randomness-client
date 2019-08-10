@@ -5,6 +5,7 @@ import Home from './components/Home'
 import NavBar from './components/NavBar';
 import SuperHeroesContainer from './containers/SuperHerosContainer'
 import StarWarsContainer from './containers/StarWarsContainer'
+import HipsterIpsumContainer from './containers/HipsterIpsumContainer'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route exact path='/' component={Home} />
           <Route path='/superheroes' component={SuperHeroesContainer} />
           <Route path='/starwars' component={StarWarsContainer} />
+          <Route path='/hipster_ipsum' component={HipsterIpsumContainer} />
         </div>        
       </div>
     </Router>
