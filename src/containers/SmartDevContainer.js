@@ -25,7 +25,7 @@ class SmartDevContainer extends Component {
         return (
             <div className = 'dev-container'>
                 <div class = 'dev-header'>
-                    <img src="https://static.vecteezy.com/system/resources/previews/000/119/234/non_2x/vector-retro-hipster-style-background.jpg" alt="dev background"></img>
+                    <img src="https://wallpaperplay.com/walls/full/5/f/4/164632.jpg" alt="dev background"></img>
                     <h1>Say Something Like a Smart Dev!</h1>
                 </div>
                 <div class = 'dev-body'>
