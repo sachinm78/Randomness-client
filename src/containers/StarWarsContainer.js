@@ -11,7 +11,6 @@ class StarWarsContainer extends Component {
 
     componentDidMount() {
         this.props.fetchStarWarsData()
-        debugger
         
     }
 
