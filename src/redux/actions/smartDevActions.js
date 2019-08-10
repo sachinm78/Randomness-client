@@ -8,9 +8,9 @@ export const fetchDevData = () => dispatch => {
     }))
 }
 
-export const fetchRandomSentence = (sentence) => {
+export const fetchRandomDevSentence = (sentence) => {
     return {
-        type: 'RANDOM_SENTENCE_SUCCESS',
+        type: 'RANDOM_DEVSENTENCE_SUCCESS',
         payload: sentence
     }
 }

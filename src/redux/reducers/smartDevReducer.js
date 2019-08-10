@@ -11,7 +11,7 @@ export default (state = initialstate, action) => {
                 ...state,
                 dev_data: action.payload
             }
-        case 'RANDOM_SENTENCE_SUCCESS':
+        case 'RANDOM_DEVSENTENCE_SUCCESS':
             
             return {
                 ...state, 

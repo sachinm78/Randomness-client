@@ -102,7 +102,7 @@
   font-size: 45px;
   padding: 10px;
   position: relative;
-  color: red;
+  color: black;
   text-shadow: 2px 2px gold;
   z-index: 2;
 } 
@@ -154,8 +154,8 @@
 }
 .sw-body {
   z-index: 2;
-  color: black;
-  text-shadow: 2px 2px gold;
+  color: darkslateblue;
+  text-shadow: 2px 2px lightcoral;
 }
 .sw-body h2 {
   font-size: 50px;
@@ -189,7 +189,7 @@
 }
 .hip-header {
   font-size: 33px;
-  color: maroon;
+  color: steelblue;
   text-shadow: 2px 2px black;
 }
 .hip-container img {
@@ -202,7 +202,7 @@
 }
 .hip-body {
   z-index: 2;
-  color: darkslategray;
+  color: darksalmon;
   text-shadow: 2px 2px black;
 }
 .hip-body h2 {
@@ -237,7 +237,7 @@
 }
 .dev-header {
   font-size: 33px;
-  color: teal;
+  color: darkslategray;
   text-shadow: 2px 2px black;
 }
 .dev-container img {
