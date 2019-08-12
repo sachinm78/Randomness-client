@@ -1,3 +1,11 @@
+# Randomness React App
+
+Randomness-client is the React front-end random generator web application that uses data provided from Randomness-api (https://github.com/sachinm78/Randomness-api), a Rails back-end api database manager.
+
+To connect to the Randomness database:
+
+    1. In your Front-end application, request the following URL: http://localhost:3001/.  This connection will only work in you are currently running your Randomness-api on your localhost port 3001 as instructed in the README found on the repo above.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +74,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Contributing
+
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+Copyright (c) 2019 sachinm78
