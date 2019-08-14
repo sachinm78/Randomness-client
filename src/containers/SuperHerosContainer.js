@@ -11,7 +11,6 @@ class SuperHerosContainer extends Component {
 
     componentDidMount() {
         this.props.fetchSuperheros()
-        
     }
 
     fetchPrefixOnClick=(e) => {
