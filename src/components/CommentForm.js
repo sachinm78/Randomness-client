@@ -27,8 +27,13 @@ class CommentForm extends React.Component {
             <form onSubmit={this.handleSubmit}>
                 <div>
                     <label>
+                    Name:
+                    <input type="text" name="name" />
+                    </label>
+                    <br />
+                    <label>
                     Comment:
-                    <input type="text" name="comment" />
+                    <textarea value={this.state.value} onChange={this.handleChange} cols={24} rows={5} />
                     </label>
                 </div>
                 <div>
