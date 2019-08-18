@@ -25,9 +25,12 @@ class FeedbackContainer extends Component {
                 <div class = 'feedback-body'>
                     <CommentForm />
                 </div>
-                <div class = 'feedback-index'>
+                {/* <div class = 'feedback-index'>
                     <h2>Feedback Index</h2>
-                </div>               
+                    {this.props.feedback.map(fb => (
+                        <p key={fb.name}>{fb.comment}</p>
+                        ))}
+                </div>             */}
             </div>
         
         )
