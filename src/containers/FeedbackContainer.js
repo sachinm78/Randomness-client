@@ -1,24 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import { fetchFeedbacks } from '../redux/actions/feedbackActions'
+import { fetchFeedback } from '../redux/actions/feedbackActions'
 import CommentForm from '../components/CommentForm'
 
 class FeedbackContainer extends Component {
 
     state = {
-        feedbacks: []
+        feedback: []
     }
 
-    // componentDidMount() {
-    //     this.props.fetchFeedbacks()
+    componentDidMount() {
+        this.props.fetchFeedback()
         
-    // }
-
-    // fetchSentenceOnClick=(e) => {
-    //     e.preventDefault()
-    //     let item = getRandom(this.props.state.hipster_data)
-    //     this.props.fetchRandomSentence(item.sentence)
-    // }
+    }
 
     render() {
         
@@ -32,7 +26,7 @@ class FeedbackContainer extends Component {
                     <CommentForm />
                 </div>
                 <div class = 'feedback-index'>
-                                  
+                    <h2>Feedback Index</h2>
                 </div>               
             </div>
         
@@ -42,8 +36,8 @@ class FeedbackContainer extends Component {
 
 const mapStateToProps = state => {
     return {
-        state: state.feedbacks
+        state: state.feedback
     }
 }
 
-export default connect(mapStateToProps, {  })(FeedbackContainer)
+export default connect(mapStateToProps, { fetchFeedback })(FeedbackContainer)
