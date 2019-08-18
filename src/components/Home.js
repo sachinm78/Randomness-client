@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from 'react-router-dom'
 import Footer from './Footer';
-import CommentForm from './Form'
+import CommentForm from './CommentForm'
 
 export default () =>
     <div class='Home-wrapper'>
