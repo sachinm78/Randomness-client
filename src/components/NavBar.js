@@ -10,6 +10,7 @@ const NavBar = () => {
                 <Link to = '/starwars' className = 'Nav-link' activeClassName = 'Active-link'>Star Wars</Link>
                 <Link to = '/hipster_ipsum' className = 'Nav-link' activeClassName = 'Active-link'>Hipster Ipsum</Link>
                 <Link to = '/smart_dev' className = 'Nav-link' activeClassName = 'Active-link'>Smart Dev</Link>
+                <Link to = '/feedback' className = 'Nav-link' activeClassName = 'Active-link'>Feedback</Link>
             </div>
         </div>
     )

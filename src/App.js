@@ -7,6 +7,7 @@ import SuperHeroesContainer from './containers/SuperHerosContainer'
 import StarWarsContainer from './containers/StarWarsContainer'
 import HipsterIpsumContainer from './containers/HipsterIpsumContainer'
 import SmartDevContainer from './containers/SmartDevContainer'
+import FeedbackContainer from './containers/FeedbackContainer'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/starwars' component={StarWarsContainer} />
           <Route path='/hipster_ipsum' component={HipsterIpsumContainer} />
           <Route path='/smart_dev' component={SmartDevContainer} />
+          <Route path='/feedback' component={FeedbackContainer} />
         </div>        
       </div>
     </Router>
