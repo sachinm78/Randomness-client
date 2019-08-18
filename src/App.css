@@ -221,7 +221,7 @@
   z-index: 2;
 }
 
-/* Smart Devm */
+/* Smart Dev */
 .dev-container {
   display: flex;
   flex-direction: column;
@@ -267,4 +267,56 @@
   font-size: 18px;
   padding: .78em;
   z-index: 2;
+}
+
+/* Feedback */
+.feedback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: repeat;
+  position: relative;
+}
+.feedback-container h1 {
+  padding: 10px;
+  position: relative;
+  z-index: 2;
+}
+.feedback-header {
+  font-size: 33px;
+  color: darkslategray;
+  text-shadow: 2px 2px black;
+}
+.feedback-container img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 102%;
+  height: auto;
+  opacity: 0.4;
+}
+.feedback-body {
+  z-index: 2;
+  color: brown;
+}
+.feedback-body h2 {
+  font-size: 60px;
+  padding: 10px;
+  position: relative;
+  z-index: 2;
+} 
+.feedback-body button {
+  display:inline-block;
+  background-color: gold;
+  color: black;
+  font-weight: bold;
+  font-size: 12px;
+  padding: .78em;
+  z-index: 2;
+}
+.feedback-index {
+  z-index: 2;
+  color: brown;
+  text-shadow: 2px 2px black;
 }
