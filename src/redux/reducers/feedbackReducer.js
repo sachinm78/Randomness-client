@@ -12,7 +12,25 @@ export default (state = initialstate, action) => {
                 ...state,
                 feedback: action.payload
             }
-                    
+        case 'SUBMIT_FEEDBACK_SUCCESS':
+            return {
+                ...state,
+                feedback: [...state.feedback, action.payload]
+            }
+        case 'SET_FEEDBACK_NAME':
+            return {
+                ...state,
+                name: action.payload
+            }
+        
+        case 'SET_FEEDBACK_COMMENT':
+            return {
+                ...state,
+                comment: action.payload
+            }
+        case 'RESET_FEEDBACK_FORM':
+            return initialstate;
+
         default:
             return state
     }

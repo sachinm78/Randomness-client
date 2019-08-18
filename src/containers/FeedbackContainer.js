@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchFeedback } from '../redux/actions/feedbackActions'
-import CommentForm from '../components/CommentForm'
+import { fetchFeedback, setName, setComment, resetFeedbackForm, createFeedback } from '../redux/actions/feedbackActions'
+import FeedbackForm from '../components/FeedbackForm'
 
 class FeedbackContainer extends Component {
 
@@ -14,23 +14,31 @@ class FeedbackContainer extends Component {
         
     }
 
+    // handleOnChange = event => {
+    //     const { name, value} = event.target;
+    //     const currentMarketFormData = Object.assign({}, this.props.marketsFormData, {
+    //       [name]: value
+    //     })
+    //     this.props.updateMarketFormData(currentMarketFormData)
+    //   }
+    
+    //   handleOnSubmit = event => {
+    //     event.preventDefault()
+    
+    //     this.props.createMarket(this.props.marketsFormData)
+    //   }
+
     render() {
         
         return (
             <div className = 'feedback-container'>
                 <div class = 'feedback-header'>
-                    <img src="http://thirdrock.com.au/wp-content/uploads/2018/04/comment1.jpg"></img>
+                    <img src="http://thirdrock.com.au/wp-content/uploads/2018/04/comment1.jpg" alt='feedback background'></img>
                     <h1>Please share your feedback.</h1>
                 </div>
                 <div class = 'feedback-body'>
-                    <CommentForm />
-                </div>
-                {/* <div class = 'feedback-index'>
-                    <h2>Feedback Index</h2>
-                    {this.props.feedback.map(fb => (
-                        <p key={fb.name}>{fb.comment}</p>
-                        ))}
-                </div>             */}
+                    <FeedbackForm />
+                </div>                
             </div>
         
         )
@@ -43,4 +51,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { fetchFeedback })(FeedbackContainer)
+export default connect(mapStateToProps, { fetchFeedback, setName, setComment, resetFeedbackForm, createFeedback })(FeedbackContainer)
