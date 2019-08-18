@@ -22,6 +22,13 @@ export const setComment = comment => {
     }
 }
 
+export const updateFeedbackForm = feedback => {
+    return {
+      type: 'UPDATED_FORM',
+      feedback
+    }
+  }
+
 const addFeedback = feedback => {
     return {
       type: "SUBMIT_FEEDBACK_SUCCESS",

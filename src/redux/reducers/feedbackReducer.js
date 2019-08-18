@@ -28,6 +28,11 @@ export default (state = initialstate, action) => {
                 ...state,
                 comment: action.payload
             }
+        case 'UPDATED_FORM':
+            return {
+                ...state,
+                feedback: action.feedback
+            }
         case 'RESET_FEEDBACK_FORM':
             return initialstate;
 
