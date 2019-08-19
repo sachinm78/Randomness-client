@@ -4,12 +4,6 @@ import { fetchFeedback, setName, setComment, createFeedback } from '../redux/act
 
 class FeedbackFormContainer extends Component {
 
-    state = {
-        name: '',
-        comment: '',
-        feedback: []
-    }
-
     componentDidMount() {
         this.props.fetchFeedback()
         
@@ -31,8 +25,6 @@ class FeedbackFormContainer extends Component {
             name: this.props.feedback.name,
             comment: this.props.feedback.comment,
             }
-            this.props.setName('')
-            this.props.setComment('')
             this.props.createFeedback(feedbackData)
         }
     
@@ -70,7 +62,7 @@ class FeedbackFormContainer extends Component {
 
 const mapStateToProps = state => {
     return {
-        state: state.feedback
+        feedback: state.feedback
     }
 }
 

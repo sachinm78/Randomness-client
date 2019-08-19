@@ -22,12 +22,12 @@ export const setComment = comment => {
     }
 }
 
-export const resetFeedbackForm = () => {
-    return {
-        type: "RESET_FEEDBACK_FORM"
+// export const resetFeedbackForm = () => {
+//     return {
+//         type: "RESET_FEEDBACK_FORM"
 
-    }
-}
+//     }
+// }
 
 export const createFeedback = feedback => {
 
@@ -46,9 +46,9 @@ return dispatch => {
             }
         })
     })
-    .then(dispatch => {
-        dispatch(resetFeedbackForm())
-    })
+    // .then(dispatch => {
+    //     dispatch(resetFeedbackForm())
+    // })
     .catch(error => console.log(error))
     }
 }
