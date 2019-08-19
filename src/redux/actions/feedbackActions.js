@@ -22,12 +22,12 @@ export const setComment = comment => {
     }
 }
 
-// export const resetFeedbackForm = () => {
-//     return {
-//         type: "RESET_FEEDBACK_FORM"
+export const resetFeedbackForm = () => {
+    return {
+        type: "RESET_FEEDBACK_FORM"
 
-//     }
-// }
+    }
+}
 
 export const createFeedback = feedback => {
 

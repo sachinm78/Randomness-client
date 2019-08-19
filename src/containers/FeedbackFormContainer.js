@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchFeedback, setName, setComment, createFeedback } from '../redux/actions/feedbackActions'
+import { fetchFeedback, setName, setComment, createFeedback, resetFeedbackForm } from '../redux/actions/feedbackActions'
 
 class FeedbackFormContainer extends Component {
 
@@ -26,6 +26,10 @@ class FeedbackFormContainer extends Component {
             comment: this.props.feedback.comment,
             }
             this.props.createFeedback(feedbackData)
+            this.setState({
+                name: "",
+                comment: ""
+            })
         }
     
     render() {
@@ -66,4 +70,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { fetchFeedback, setName, setComment, createFeedback })(FeedbackFormContainer)
+export default connect(mapStateToProps, { fetchFeedback, setName, setComment, createFeedback, resetFeedbackForm })(FeedbackFormContainer)
