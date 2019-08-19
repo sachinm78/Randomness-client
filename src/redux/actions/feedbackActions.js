@@ -22,6 +22,13 @@ export const setComment = comment => {
     }
 }
 
+const addFeedback = feedback => {
+    return {
+      type: "SUBMIT_FEEDBACK_SUCCES",
+      feedback
+    }
+  }
+
 export const resetFeedbackForm = () => {
     return {
         type: "RESET_FEEDBACK_FORM"
@@ -33,7 +40,6 @@ export const createFeedback = feedback => {
 
 return dispatch => {
 
-    dispatch({type: 'SUBMIT_FEEDBACK_SUCCESS', payload: feedback})
     fetch("http://localhost:3001/feedbacks", {
     method: "POST",
     headers: {
@@ -46,9 +52,11 @@ return dispatch => {
             }
         })
     })
-    // .then(dispatch => {
-    //     dispatch(resetFeedbackForm())
-    // })
-    .catch(error => console.log(error))
+    .then(res => res.json())
+    .then(feedback => {
+        dispatch(addFeedback(feedback))
+        dispatch(resetFeedbackForm())
+      })
+      .catch(error => console.log(error))    
     }
 }
