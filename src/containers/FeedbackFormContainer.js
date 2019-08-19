@@ -21,15 +21,16 @@ class FeedbackFormContainer extends Component {
     
     handleOnSubmit = e => {
         e.preventDefault()
+            let initialstate = {
+                name: '',
+                comment: ''
+            }
             let feedbackData = {
-            name: this.props.feedback.name,
-            comment: this.props.feedback.comment,
+                name: this.props.feedback.name,
+                comment: this.props.feedback.comment,
             }
             this.props.createFeedback(feedbackData)
-            this.setState({
-                name: "",
-                comment: ""
-            })
+            this.resetFeedbackForm(initialstate)
         }
     
     render() {
