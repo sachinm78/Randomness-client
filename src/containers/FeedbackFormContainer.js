@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchFeedback, setName, setComment, createFeedback, resetFeedbackForm } from '../redux/actions/feedbackActions'
+import { withRouter } from 'react-router-dom';
 
 class FeedbackFormContainer extends Component {
 
@@ -12,26 +13,24 @@ class FeedbackFormContainer extends Component {
     handleNameChange = e => {
         e.preventDefault()
         this.props.setName(e.target.value)
+        // e.target.reset()
     }
     
     handleCommentChange = e => {
         e.preventDefault()
         this.props.setComment(e.target.value)
+        // e.target.reset()
     }
     
     handleOnSubmit = e => {
         e.preventDefault()
-            let initialstate = {
-                name: '',
-                comment: ''
-            }
+        this.props.history.push('/')
             let feedbackData = {
                 name: this.props.feedback.name,
                 comment: this.props.feedback.comment,
             }
-            this.props.createFeedback(feedbackData)
-            this.resetFeedbackForm(initialstate)
-        }
+            this.props.createFeedback(feedbackData)            
+    }
     
     render() {
         
@@ -71,4 +70,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { fetchFeedback, setName, setComment, createFeedback, resetFeedbackForm })(FeedbackFormContainer)
+export default connect(mapStateToProps, { fetchFeedback, setName, setComment, createFeedback, resetFeedbackForm })(withRouter(FeedbackFormContainer))
