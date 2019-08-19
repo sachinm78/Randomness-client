@@ -22,20 +22,6 @@ export const setComment = comment => {
     }
 }
 
-export const updateFeedbackForm = feedback => {
-    return {
-      type: 'UPDATED_FORM',
-      feedback
-    }
-  }
-
-const addFeedback = feedback => {
-    return {
-      type: "SUBMIT_FEEDBACK_SUCCESS",
-      feedback
-    }
-}
-
 export const resetFeedbackForm = () => {
     return {
         type: "RESET_FEEDBACK_FORM"
@@ -47,16 +33,20 @@ export const createFeedback = feedback => {
 
 return dispatch => {
 
-    return fetch("http://localhost:3001/feedbacks", {
+    dispatch({type: 'SUBMIT_FEEDBACK_SUCCESS', payload: feedback})
+    fetch("http://localhost:3001/feedbacks", {
     method: "POST",
     headers: {
         'Content-type': 'application/json'
     },
-    body: JSON.stringify({name: feedback.name, comment: feedback.comment}),
+    body: JSON.stringify({
+        feedback: {
+            name: feedback.name,
+            comment: feedback.comment
+            }
+        })
     })
-    .then(res => res.json())
-    .then(feedback => {
-        dispatch(addFeedback(feedback))
+    .then(dispatch => {
         dispatch(resetFeedbackForm())
     })
     .catch(error => console.log(error))

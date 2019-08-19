@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchFeedback, setName, setComment, resetFeedbackForm, createFeedback, updateFeedbackForm } from '../redux/actions/feedbackActions'
+import { fetchFeedback, setName, setComment, createFeedback } from '../redux/actions/feedbackActions'
 
 class FeedbackFormContainer extends Component {
 
@@ -15,22 +15,29 @@ class FeedbackFormContainer extends Component {
         
     }
 
-    handleOnChange = e => {
-        const { name, value} = e.target;
-        const feedbackFormData = Object.assign({}, this.props.feedback, {
-          [name]: value
-        })
-        this.props.updateFeedbackForm(feedbackFormData)
-      }
-    
-      handleOnSubmit = e => {
+    handleNameChange = e => {
         e.preventDefault()
-        this.props.createFeedback(this.props.feedback)
-      }
-
+        this.props.setName(e.target.value)
+    }
+    
+    handleCommentChange = e => {
+        e.preventDefault()
+        this.props.setComment(e.target.value)
+    }
+    
+    handleOnSubmit = e => {
+        e.preventDefault()
+            let feedbackData = {
+            name: this.props.feedback.name,
+            comment: this.props.feedback.comment,
+            }
+            this.props.setName('')
+            this.props.setComment('')
+            this.props.createFeedback(feedbackData)
+        }
+    
     render() {
-        const { name, comment } = this.props.feedback;
-
+        
         return (
             <div className = 'feedback-container'>
                 <div class = 'feedback-header'>
@@ -38,20 +45,20 @@ class FeedbackFormContainer extends Component {
                     <h1>Please share your feedback.</h1>
                 </div>
                 <div class = 'feedback-body'>
-                    <form onSubmit={this.handleOnSubmit}>
+                    <form onSubmit={e => this.handleOnSubmit(e)}>
                         <div>
                             <label>
                             Name:
-                            <input type="text" onChange= {this.handleOnChange} name= "name" value={name} />
+                            <input type="text" name= "name" onChange={e => this.handleNameChange(e)} value={this.props.name} />
                             </label>
                             <br />
                             <label>
                             Comment:
-                            <textarea type="text" onChange= {this.handleOnChange} name= "comment" value={comment} cols={24} rows={5} />
+                            <textarea type="text" name= "comment" onChange={e => this.handleCommentChange(e)} value={this.props.comment} cols={24} rows={5} />
                             </label>
                         </div>
                         <div>
-                            <button type="submit">Submit Comment</button>
+                            <button type="submit">Submit Feedback</button>
                         </div>                   
                     </form>
                 </div>                
@@ -67,4 +74,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { fetchFeedback, setName, setComment, resetFeedbackForm, createFeedback, updateFeedbackForm })(FeedbackFormContainer)
+export default connect(mapStateToProps, { fetchFeedback, setName, setComment, createFeedback })(FeedbackFormContainer)
