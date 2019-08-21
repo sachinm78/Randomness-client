@@ -298,7 +298,9 @@
 }
 .feedback-body {
   z-index: 2;
-  color: brown;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
 }
 .feedback-body h2 {
   font-size: 60px;
@@ -318,5 +320,4 @@
 .feedback-index {
   z-index: 2;
   color: brown;
-  text-shadow: 2px 2px black;
-}
+  }
