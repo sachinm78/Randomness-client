@@ -42,13 +42,13 @@ class FeedbackFormContainer extends Component {
                     <form onSubmit={e => this.handleOnSubmit(e)}>
                         <div>
                             <label>
-                            Name:
+                            Name:  
                             <input type="text" name= "name" onChange={e => this.handleNameChange(e)} value={this.props.name} />
                             </label>
                             <br />
                             <label>
                             Comment:
-                            <textarea type="text" name= "comment" onChange={e => this.handleCommentChange(e)} value={this.props.comment} cols={24} rows={5} />
+                            <textarea type="text" name= "comment" onChange={e => this.handleCommentChange(e)} value={this.props.comment} cols={26} rows={5} />
                             </label>
                         </div>
                         <div>
